@@ -1,0 +1,45 @@
+#App {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #4f4392;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  padding: 15px;
+  color: aliceblue;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar-content {
+  padding-left: 50px;
+  padding-top: 3rem;
+}
+
+#body {
+  width: auto;
+  padding: 20px;
+  height: 100%;
+}
+
+.historyLog {
+  border: #6e6e6e;
+  border-width: 2px;
+  border-style: solid;
+  height: 100%;
+  padding: 1rem;
+  background-color: #4f4392;
+  max-height: 80vh;
+}
+
+.HistoryItem {
+  width: auto;
+  padding: 10px;
+  background-color: white;
+  margin-top: 10px;
+}
