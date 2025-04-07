@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 function Sidebar() {
     
@@ -10,14 +11,24 @@ function Sidebar() {
     
     return <div className={`sidebar ${isCollapsed? 'collapsed': 'full'}`}>
         <div onClick={toggleSidebar}>Menu</div>
-        <div className="sidebar-content">
-            <p>Dashboard</p>
-            <p>Workouts</p>
-            <p>Activity</p>
-            <p>Goals</p>
-            <p>Meals</p>
-            <p>Sign-out</p>
-        </div>
+        
+        <ul className="sidebar-content">
+            <li >
+                <Link to={'/dashboard'} className="nav_option">Dashboard </Link>
+            </li>
+            <li>
+                <Link to={'/workouts'} className="nav_option">Workouts </Link>
+            </li>
+            <li>
+                <Link to={'/activity'} className="nav_option">Activity</Link>
+            </li>
+            <li>
+                <Link to={'/goals'} className="nav_option">Goals</Link>
+            </li>
+            <li>
+                <Link to={'/meals'} className="nav_option">Meals</Link>
+            </li>
+        </ul>
     </div>
 }
   

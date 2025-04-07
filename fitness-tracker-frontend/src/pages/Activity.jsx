@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Alert, Container, Form } from "react-bootstrap"
+import { Container, Form } from "react-bootstrap"
 import ActivityItem from "../components/ActivityItem"
 
 
