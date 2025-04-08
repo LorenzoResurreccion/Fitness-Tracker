@@ -1,5 +1,3 @@
-import { Container } from "react-bootstrap"
-
 function ActivityItem(props) {
 
     let date = props.date

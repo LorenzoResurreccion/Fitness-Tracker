@@ -5,6 +5,8 @@ import Activity from './pages/Activity'
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
 import Dashboard from './pages/Dashboard'
 import Workouts from './pages/Workouts'
+import Goals from './pages/Goals'
+import Meals from './pages/Meals'
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path='/dashboard' element={<Dashboard/>}/>
             <Route path='/activity' element={<Activity/>}/>
             <Route path='/workouts' element={<Workouts/>}/>
+            <Route path='/goals' element={<Goals/>}/>
+            <Route path='/meals' element={<Meals/>}/>
           </Routes>
         </div>
       </div>

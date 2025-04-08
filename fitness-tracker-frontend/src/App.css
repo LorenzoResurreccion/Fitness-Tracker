@@ -8,7 +8,6 @@
   background-color: #4f4392;
   transition: width 0.3s ease;
   overflow-x: hidden;
-  padding: 15px;
   color: aliceblue;
   
 }
@@ -18,8 +17,6 @@
 }
 
 .sidebar-content {
-  padding-left: 50px;
-  padding-top: 3rem;
   list-style: none;
   width: auto;
 }
@@ -52,4 +49,28 @@
 .nav_option:visited {
   color: aliceblue;
   text-decoration: none;
+  display: flex;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0.25rem;
+  background-color: #403678;
+}
+
+
+.nav_symb {
+  flex: 0;
+  padding: 1.75rem;
+  margin: 0.25rem;
+}
+
+.nav_label {
+  flex: 1;
+  padding: 1.75rem;
+  margin: 0.25rem;
 }
