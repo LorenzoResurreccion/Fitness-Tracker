@@ -3,6 +3,7 @@ package com.FitTracker.fitnessTrackerServer.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,6 +39,16 @@ public class ActivityController {
         try{
             return ResponseEntity.ok(activityService.getActivities());
         } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Something went wrong!");
+        }
+    }
+
+    @DeleteMapping("/activity")
+    public ResponseEntity<?> deleteActivity(@RequestBody ActivityDTO dto) {
+        int result = activityService.deleteActivity(dto.getId());
+        if (result == 1) {
+            return ResponseEntity.status(HttpStatus.OK).body("record deleted");
+        } else {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Something went wrong!");
         }
     }

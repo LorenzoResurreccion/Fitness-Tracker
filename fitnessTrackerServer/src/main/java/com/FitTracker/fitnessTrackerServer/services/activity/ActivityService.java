@@ -9,4 +9,6 @@ public interface ActivityService {
     ActivityDTO postActivity(ActivityDTO dto);
 
     List<ActivityDTO> getActivities();
+
+    public int deleteActivity(long id);
 }

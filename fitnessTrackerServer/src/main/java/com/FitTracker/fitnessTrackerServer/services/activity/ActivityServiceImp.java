@@ -32,4 +32,14 @@ public class ActivityServiceImp implements ActivityService{
         List<Activity> activities = activityRepository.findAll();
         return activities.stream().map(Activity::getActivityDTO).collect(Collectors.toList());
     }
+
+    public int deleteActivity(long id) {
+        try {
+            activityRepository.deleteById(id);
+            return 1;
+        } catch (Exception e) {
+            return -1;
+        }
+        
+    }
 }
