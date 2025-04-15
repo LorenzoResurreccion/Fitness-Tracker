@@ -9,53 +9,42 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.FitTracker.fitnessTrackerServer.DTO.UserDTO;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
-import lombok.NonNull;
+
 
 @Entity
 @Data
+@Table(name = "Users")
 public class User implements UserDetails{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @NonNull
+    @Column(nullable = false)
     private Long id;
 
-    @NonNull
+    @Column(nullable = false)
     private String fullname; 
 
-    @NonNull
-    @Column(unique = true, length = 100)
+    @Column(unique = true, nullable = false, length = 100)
     private String email;
 
-    @NonNull
+    @Column(nullable = false)
     private String password;
 
     @CreationTimestamp
+    @Column(updatable = false, name = "created_at")
     private Date createdAt;
 
     @UpdateTimestamp
+    @Column( name = "updated_at")
     private Date updatedAt;
 
-
-    public UserDTO gUserDTO() {
-        UserDTO userDTO = new UserDTO();
-
-        userDTO.setEmail(email);
-        userDTO.setFullname(fullname);
-        userDTO.setPassword(password);
-        userDTO.setCreatedAt(createdAt);
-        userDTO.setUpdatedAt(updatedAt);
-
-        return userDTO;
-    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
