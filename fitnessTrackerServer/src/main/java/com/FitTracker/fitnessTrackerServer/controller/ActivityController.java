@@ -34,7 +34,6 @@ public class ActivityController {
     }
 
     @GetMapping("/activity")
-    
     public ResponseEntity<?> getActivities(@RequestParam String email) {
        
         try{
