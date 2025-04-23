@@ -27,6 +27,8 @@ public class Activity {
     
     private int caloriesBurned;
 
+    private String email;
+
     public ActivityDTO getActivityDTO(){
         ActivityDTO activityDTO = new ActivityDTO();
 
@@ -35,6 +37,7 @@ public class Activity {
         activityDTO.setDistance(distance);
         activityDTO.setSteps(steps);
         activityDTO.setCaloriesBurned(caloriesBurned);
+        activityDTO.setEmail(email);
         
         return activityDTO;
     }

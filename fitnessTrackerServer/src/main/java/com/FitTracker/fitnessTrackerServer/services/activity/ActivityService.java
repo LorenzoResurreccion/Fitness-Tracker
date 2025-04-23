@@ -8,7 +8,7 @@ public interface ActivityService {
 
     ActivityDTO postActivity(ActivityDTO dto);
 
-    List<ActivityDTO> getActivities();
+    List<ActivityDTO> getActivities(String email);
 
     public int deleteActivity(long id);
 }
