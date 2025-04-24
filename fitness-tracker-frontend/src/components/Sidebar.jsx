@@ -4,11 +4,11 @@ import { Link } from "react-router-dom"
 function Sidebar() {
     
     const [isCollapsed, setCollapsed] = useState(true)
-
+   
     function toggleSidebar() {
         setCollapsed(!isCollapsed)
     }
-    
+
     return <div className={`sidebar ${isCollapsed? 'collapsed': 'full'}`}>
         <div onClick={toggleSidebar} className="nav_option">
             <div className="nav_symb" style={{paddingLeft: '1rem'}}>Menu</div>
@@ -44,6 +44,12 @@ function Sidebar() {
                 <Link to={'/meals'} className="nav_option">
                     <div className="nav_symb">M</div>
                     <div className="nav_label">Meals</div>
+                </Link>
+            </li>
+            <li>
+                <Link to={'/logout'} className="nav_option">
+                    <div className="nav_symb">L</div>
+                    <div className="nav_label">Logout</div>
                 </Link>
             </li>
         </ul>
