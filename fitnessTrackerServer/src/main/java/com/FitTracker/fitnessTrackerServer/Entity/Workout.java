@@ -30,6 +30,8 @@ public class Workout {
 
     private String details;
 
+    private String email;
+
     public WorkoutDTO getWorkoutDTO() {
         WorkoutDTO workoutDTO = new WorkoutDTO();
 
@@ -40,6 +42,7 @@ public class Workout {
         workoutDTO.setDuration(duration);
         workoutDTO.setWeight(weight);
         workoutDTO.setDetails(details);
+        workoutDTO.setEmail(email);
 
         return workoutDTO;
     }

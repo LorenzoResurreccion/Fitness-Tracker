@@ -7,5 +7,5 @@ import com.FitTracker.fitnessTrackerServer.DTO.WorkoutDTO;
 public interface WorkoutService {
 
     WorkoutDTO postWorkout(WorkoutDTO dto);
-    List<WorkoutDTO>getWorkouts();
+    List<WorkoutDTO>getWorkouts(String email);
 }

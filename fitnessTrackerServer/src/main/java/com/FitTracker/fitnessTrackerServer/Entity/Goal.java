@@ -2,6 +2,8 @@ package com.FitTracker.fitnessTrackerServer.Entity;
 
 import java.util.Date;
 
+import com.FitTracker.fitnessTrackerServer.DTO.GoalDTO;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,5 +25,22 @@ public class Goal {
     private Date start;
 
     private Date end;
+
+    private boolean completed;
+
+    private String email;
+
+    public GoalDTO getGoalDTO() {
+        GoalDTO goalDTO = new GoalDTO();
+
+        goalDTO.setTitle(title);
+        goalDTO.setDetails(details);
+        goalDTO.setStart(start);
+        goalDTO.setEnd(end);
+        goalDTO.setCompleted(completed);
+        goalDTO.setEmail(email);
+
+        return goalDTO;
+    }
 
 }

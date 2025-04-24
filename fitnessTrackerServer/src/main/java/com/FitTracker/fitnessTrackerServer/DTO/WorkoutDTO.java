@@ -21,4 +21,6 @@ public class WorkoutDTO {
 
     private String details;
 
+    private String email;
+
 }

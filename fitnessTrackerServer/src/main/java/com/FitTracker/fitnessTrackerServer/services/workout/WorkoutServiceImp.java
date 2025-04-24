@@ -26,13 +26,14 @@ public class WorkoutServiceImp implements WorkoutService{
         workout.setDuration(dto.getDuration());
         workout.setWeight(dto.getWeight());
         workout.setDetails(dto.getDetails());
+        workout.setEmail(dto.getEmail());
 
         return workoutReposiory.save(workout).getWorkoutDTO();
         
     }
 
-    public List<WorkoutDTO>getWorkouts(){
-        List<Workout> workouts = workoutReposiory.findAll();
+    public List<WorkoutDTO>getWorkouts(String email){
+        List<Workout> workouts = workoutReposiory.findByEmail(email);
         return workouts.stream().map(Workout::getWorkoutDTO).collect(Collectors.toList());
 
     }

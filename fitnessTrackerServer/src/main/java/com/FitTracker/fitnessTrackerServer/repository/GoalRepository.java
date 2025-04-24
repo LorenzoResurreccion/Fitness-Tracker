@@ -5,9 +5,10 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.FitTracker.fitnessTrackerServer.Entity.Workout;
+import com.FitTracker.fitnessTrackerServer.Entity.Goal;
 
 @Repository
-public interface WorkoutReposiory extends JpaRepository<Workout, Long>{
-    List<Workout> findByEmail(String email);
+public interface GoalRepository extends JpaRepository<Goal, Long>{
+    List<Goal> findByEmail(String email);
+
 }
