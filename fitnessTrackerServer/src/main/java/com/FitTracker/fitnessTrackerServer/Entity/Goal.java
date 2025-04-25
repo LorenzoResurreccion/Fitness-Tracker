@@ -33,6 +33,7 @@ public class Goal {
     public GoalDTO getGoalDTO() {
         GoalDTO goalDTO = new GoalDTO();
 
+        goalDTO.setId(id);
         goalDTO.setTitle(title);
         goalDTO.setDetails(details);
         goalDTO.setStart(start);

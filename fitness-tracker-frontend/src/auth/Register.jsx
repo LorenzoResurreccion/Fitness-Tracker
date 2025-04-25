@@ -40,7 +40,7 @@ function Register() {
                 <button type="submit" className="btn btn-primary" >Submit</button>
             </Form>
         </div>
-        <div onClick={navigateLogin}>Already have an account? Login</div>
+        <div onClick={navigateLogin}>Already have an account? Login.</div>
     </div>)
 }
 

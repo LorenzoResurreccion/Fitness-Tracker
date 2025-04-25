@@ -30,10 +30,7 @@ public class ActivityServiceImp implements ActivityService{
     }
 
     public List<ActivityDTO> getActivities(String email) {
-        //List<Activity> activities = activityRepository.findAll();
-        System.out.println(email);
         List<Activity> activities = activityRepository.findByEmail(email);
-        System.out.println(activities);
         return activities.stream().map(Activity::getActivityDTO).collect(Collectors.toList());
     }
 

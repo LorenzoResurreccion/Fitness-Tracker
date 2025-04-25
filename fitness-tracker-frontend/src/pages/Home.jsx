@@ -18,9 +18,9 @@ function  Home() {
         <p>This project was made using a React frontend and Spring Boot/MySQL backend</p>
         <p>Users will be able to login to existing accounts or register a new account</p>
         <p>This is a project I made for fun and to develop new skills, hope you enjoy!</p>
-
-        <button onClick={navigateLogin}>Login</button>
-        <button onClick={navigateRegister}>Register</button>
+        <div style={{padding: '5rem'}}/>
+        <div onClick={navigateLogin} style={{padding: '1rem'}}>Already have an acconnt? Login.</div>
+        <div onClick={navigateRegister}>Don't have an account yet? Register.</div>
     </div>
 }
 

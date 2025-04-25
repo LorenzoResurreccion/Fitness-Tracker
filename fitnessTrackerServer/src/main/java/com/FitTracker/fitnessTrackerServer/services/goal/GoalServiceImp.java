@@ -13,11 +13,11 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class GoalServiceImp {
+public class GoalServiceImp implements GoalService{
 
     private final GoalRepository goalRepository;
 
-    public GoalDTO posGoal(GoalDTO dto) {
+    public GoalDTO postGoal(GoalDTO dto) {
         Goal goal = new  Goal();
 
         goal.setTitle(dto.getTitle());

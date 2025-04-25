@@ -5,9 +5,9 @@ import java.util.List;
 import com.FitTracker.fitnessTrackerServer.DTO.GoalDTO;
 
 public interface GoalService {
-    
-    public GoalDTO posGoal(GoalDTO dto);
 
-    public List<GoalDTO> getGoals(String email);
+    GoalDTO postGoal(GoalDTO dto);
+
+    List<GoalDTO> getGoals(String email);
 
 }
