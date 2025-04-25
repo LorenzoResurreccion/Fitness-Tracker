@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import LoginStatusContext from "../contexts/LoginStatusContext";
 import { useContext } from "react";
+import { LoginStatusContext } from "../contexts/LoginStatusContext";
 
 
 function Login() {
@@ -40,17 +40,20 @@ function Login() {
                 alert("Login Successful")
 
                 //update login statuses
-                //sessionStorage.setItem('loginStatus', JSON.stringify(true))
+                //sessionStorage.setItem('loginStatus', JSON.stringify(false))
                 //sessionStorage.setItem('email', JSON.stringify(emailRef.current.value))
+                setLoginStatus(true)
                
                 
                 //save token and expire time
                 res.json().then(json => {
                     console.log(json)
+                    //sessionStorage.setItem('loginStatus', JSON.stringify(json.token))
+
                 })
 
                 
-                //navigate('/dashboard')
+                navigate('/dashboard')
                 
             }
             
@@ -75,7 +78,7 @@ function Login() {
                 <button type="submit" className="btn btn-primary" >Submit</button>
             </Form>
         </div>
-        <div onClick={navigateRegister}>No account? Register.</div>
+        <div>No account? <a onClick={navigateRegister}>Register</a></div>
     </div>)
 }
 
