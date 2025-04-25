@@ -40,15 +40,14 @@ function Login() {
                 alert("Login Successful")
 
                 //update login statuses
-                //sessionStorage.setItem('loginStatus', JSON.stringify(false))
+                //sessionStorage.setItem('loginStatus', JSON.stringify(true))
                 //sessionStorage.setItem('email', JSON.stringify(emailRef.current.value))
                 setLoginStatus(true)
                
                 
                 //save token and expire time
                 res.json().then(json => {
-                    console.log(json)
-                    //sessionStorage.setItem('loginStatus', JSON.stringify(json.token))
+                    //sessionStorage.setItem('JWT', JSON.stringify(json.token))
 
                 })
 
